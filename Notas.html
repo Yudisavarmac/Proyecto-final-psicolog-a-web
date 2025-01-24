@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estyles.css">
+    <title>Registros Emocionales</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mt-5 mb-5 text-light">Mis Registros Emocionales</h1>
+        <div class="container oneContainer">
+            <div id="completedCount" class="myContainer"></div>
+            <div class="myContainer2">
+                <button id="addButton" class="myButton">Añadir Registro</button>
+            </div>
+
+            <div class="textareacontainer">
+                <select id="emotionSelect" class="form-select" style="display: none;">
+                    <option value="">Selecciona tu emoción</option>
+                    <option value="Felicidad">Felicidad</option>
+                    <option value="Tristeza">Tristeza</option>
+                    <option value="Enojo">Enojo</option>
+                    <option value="Ansiedad">Ansiedad</option>
+                    <option value="Otros">Otros</option>
+                </select>
+
+                <input type="number" id="intensityInput" class="form-control mt-2" style="display: none;" placeholder="Intensidad (1-10)">
+                <textarea id="noteInput" placeholder="Describe tu emoción aquí..." class="myTextArea mt-2" style="display: none;"></textarea>
+                <input type="date" id="dateInput" class="form-control mt-2" style="display: none;">
+                <button id="saveButton" class="saveButton mt-2" style="display: none;">Guardar registro</button>
+            </div>
+
+            <div class="container">
+                <div class="row taskContainer justify-content-center" id="notesContainer">
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" id="noteIndex">
+    </div>
+    
+    <script src="./Notas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+<div class="d-flex justify-content-center mt-3">
+    <a href="index.html">
+      <button class="myButton btn btn-primary btn-lg w-30">Volver</button>
+    </a>
+  </div>
+</html>
